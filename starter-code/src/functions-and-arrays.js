@@ -1,17 +1,77 @@
 // Find the maximum
 
+function maxOfTwoNumbers (a, b){  
+  if(a > b){ 
+    return a; 
+  } else { 
+    return b; 
+  }
+}; 
+
+
 // Finding Longest Word
+
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
+
+function findLongestWord (arr) { 
+  let biggerWord =[];  
+
+  if(arr.length === 0){ 
+    return null;
+  }; 
+
+  for(let i=0; i < arr.length; i++){ 
+    if(arr[i].length > biggerWord.length) { 
+    biggerWord = arr[i]; 
+    } 
+  } return biggerWord;  
+}; 
+
+//possibly the other solution// 
+// const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
+// function findLongestWord (arr) {
+//   let biggerWord = [];
+//   let pushWord = [];
+//   if (arr.length === 0) {
+//     return null
+//   }
+//   for (let i = 0; i < arr.length; i++) {
+//     if  (arr[i].length > biggerWord.length) {
+//       biggerWord = arr[i];
+//       pushWord.splice(0,arr.length, biggerWord);
+//     } 
+//   } return pushWord
+// }
 
 // Calculating a Sum
 
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-// Calculate the Average
+function sumArray (numbersArr) { 
+  let sumOfNumbers = 0; 
+  for(let i = 0; i < numbersArr.length; i++){ 
+    sumOfNumbers += numbersArr[i]; 
+  } return sumOfNumbers; 
+}
 
+
+// Calculate the Average
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
+function averageNumbers (newArr) {
+  if (newArr.length === 0) {
+    return null
+  }
+  let sumAll = 0
+  for (let i = 0; i < newArr.length; i++) {
+    sumAll += newArr[i]
+  } 
+  avg = sumAll / newArr.length
+  return avg;
+}
 
 // Array of Strings
+//Declare a function named averageWordLength that receives as a single argument an array of words and returns the average length of the words:
+
 const wordsArr = [
   'seat',
   'correspond',
@@ -24,6 +84,15 @@ const wordsArr = [
   'fuel',
   'palace'
 ];
+
+function averageWordLength(array){
+  let jointArray = array.join(""); 
+  return jointArray; 
+};
+
+averageWordLength(wordsArr); 
+
+
 
 // Unique Arrays
 const wordsUnique = [
