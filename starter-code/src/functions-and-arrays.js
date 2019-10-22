@@ -83,16 +83,21 @@ const wordsArr = [
   'chaos',
   'fuel',
   'palace'
-];
+]; 
 
 function averageWordLength(array){
-  let jointArray = array.join(""); 
-  return jointArray; 
+  if(array.length === 0){
+    return null
+  }; 
+
+  let sum = 0
+
+  sum = array.join("").length;
+  return sum / array.length;  
+
 };
 
 averageWordLength(wordsArr); 
-
-
 
 // Unique Arrays
 const wordsUnique = [
